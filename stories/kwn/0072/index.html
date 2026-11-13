@@ -91,7 +91,8 @@
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/01.mp3"></audio>
 			<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Écrit par"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/pencil.svg" alt="Écrit par"></span> Zulu folktale</h3>
@@ -99,8 +100,9 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Traduit par"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/global.svg" alt="Traduit par"></span> Alex Kasona</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Langue"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/language.svg" alt="Langue"></span> <a href="/storybooks-french/stories/kwn">kwangali</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/level.svg" alt="Niveau"></span> <a href="/storybooks-french/stories/kwn/level4">Niveau 4</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Lire l’histoire"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/speaker.svg" alt="Lire l’histoire en entier"></span> <span class="cover_msg">L’enregistrement audio de cette histoire est actuellement indisponible.</span></h3>
-
+		<h3><span class="tooltip tooltip-right" data-tooltip="Lire l’histoire"><img class="cover-icon cover-icon-audio" src="/storybooks-french/css/speaker.svg" alt="Lire l’histoire en entier"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/kwn/0072/kwn-0072_honeyguide.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Vitesse de lecture"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/speedometer.svg" alt="Vitesse de lecture" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Vitesse de lecture: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Lecture automatique du conte"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-french/css/play.svg" alt="Lecture automatique du conte" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 
@@ -109,9 +111,7 @@
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Eli esanseko lyaNgende, mudimburuli gousi namukwawo gomakurulya gedina Gingile. Ezuva limwe apa Gingile ga zire aka sane ta zuvhu ezigido lya Ngende. Mo
-
-kana kaGingile tamu zura mazeze komagazaro gousi. Ta sikama a purakene nawa, ta taratara dogoro ta mono yidira komutayi keguru lyomutwe gwendi. Tjiki-tjiki-tjiki kadiragona taka dimbi ako taka tukire kositji soku kwama ko nesi soku kwama ko. Tjiki-tjiki-tjiki, ta zigida. Poyiruwo yimwe tasi hageke si divilise nsene Gingile ta kwama.
+	Eli esanseko lyaNgende, mudimburuli gousi namukwawo gomakurulya gedina Gingile. Ezuva limwe apa ga zire Gingile a ka sane ta zuvhu ezigido lyaNgende. Mokana kaGingile tamu zura mazeze komagazaro gousi. Ta sikama a purakene nawa, ta tara-tara dogoro ta mono yidira komutayi keguru lyomutwe gwendi. Tjiki-tjiki-tjiki kadiragona taka dimbi ako taka tukire kositji sokukwama ko nesi sokukwama ko. Tjiki-tjiki-tjiki, ta zigida. Poyiruwo yimwe tasi hageke si divilise nsene Gingile ta kwama.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -122,7 +122,8 @@ kana kaGingile tamu zura mazeze komagazaro gousi. Ta sikama a purakene nawa, ta 
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
@@ -135,7 +136,7 @@ kana kaGingile tamu zura mazeze komagazaro gousi. Ta sikama a purakene nawa, ta 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Konyima zo harufa zovili tava ya siki poukuzu wounene womowiza. Ngende ta mbatauka nepiyagano monomutayi. Makura taya sikama pomutayi gumwe ta pirukidisire mutwe gwendi kwa Gingile ngwendi asi ta tanta asi, “Wou apa! Wiza ngesi! Yinke yina ku ku kwatera siruwo?” Gingile kapi ga mwene mo nonyiki monda zositji, nye ga huguvarere Ngende.
+	Konyima zoharufa zovili tava ya siki poukuzu wounene womowiza. Ngende ta mbatauka nepiyagano monomutayi. Makura ta ya sikama pomutayi gumwe ta pirukidisire mutwe gwendi kwaGingile ngwendi asi ta tanta asi, “Wou apa! Wiza ngesi! Yisinke ono kulirangera?” Gingile kapi ga mwene mo nonyiki monda zositji, nye ga huguvarere Ngende.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -146,7 +147,8 @@ kana kaGingile tamu zura mazeze komagazaro gousi. Ta sikama a purakene nawa, ta 
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
@@ -159,7 +161,7 @@ kana kaGingile tamu zura mazeze komagazaro gousi. Ta sikama a purakene nawa, ta 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Makura Gingile ta tura egonga lyendi lyoku sanesa monda zositji, ta pongayike tutjigona toku kukuta ta hwameke kamundirogona. Makura apa mundiro gwa twerere nawa, ta tura sitji sosire soku kukuta pokatji komundiro. Sitji esi kwasi diva asi aso ku tutumuka musi gomunzi nsene tasi twera. Yipo ga varekere kuronda age ana si kwatesa nomazego kouhura wositji koutenda waso.
+	Makura Gingile ta tura egonga lyendi lyokusanesa monda zositji, ta pongaike tutjigona tokukukuta ta hwameke kamundirogona. Makura apa gwa twerere nawa mundiro, ta tura sitji sosire sokukukuta pokatji komundiro. Sitji esi kwa si diva asi aso kututumuka musi gomunzi nsene tasi twera. Yipo ga varekere kuronda age ana si kwatesa nomazego kouhura wositji koutenda waso.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -170,7 +172,8 @@ kana kaGingile tamu zura mazeze komagazaro gousi. Ta sikama a purakene nawa, ta 
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
@@ -183,9 +186,7 @@ kana kaGingile tamu zura mazeze komagazaro gousi. Ta sikama a purakene nawa, ta 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Karuwogona ta zuvhu muhagaro gononyiki omu dina ku yimbana. Da pwaga mo da hwilira mo morupako rositji momutayi da tungira mbara dazo. Apa Gingire ga sikire po mbara dazo, ta sindike mbara zononyiki nohuro zositji somusi morupako. Nonyiki ta di rupauka mo di pwage ne handu nerwameno. Tadi tuka di ze kwapeke, morwa
-
-nonyiki kapi da here musi, nye kapisi komeho zoku pa matendaguro gokuzuga Gingile!
+	Usimbu-usimbu ta zuvhu muhagaro gononyiki omu dina kuyimbana. Da pwaga mo, da hwilira mo morupako rositji momutayi da tungira mbara dazo. Apa ga sikire Gingire pombara dazo, ta sindike mbara zononyiki nohuro zositji somusi morupako. Nonyiki tadi rupauka mo di pwage nehandu nerwameno. Tadi tuka di ze kwapeke, morwa nonyiki kapi da here musi, nye kapisi komeho zokupa Gingile matendaguro gokuzuga!
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -196,7 +197,8 @@ nonyiki kapi da here musi, nye kapisi komeho zoku pa matendaguro gokuzuga Gingil
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
@@ -209,8 +211,7 @@ nonyiki kapi da here musi, nye kapisi komeho zoku pa matendaguro gokuzuga Gingil
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Apa da tundire po nonyiki Gingile ta sindike ewoko lyendi mosikorogo sononyiki. Ta pwagesa mo ewoko lyendi lina zura evhonkwa lyousi, lina kundoka usi wouwa una zura magadi nomaginyonyiki gomazera. Makura ta tura evhonkwa lyousi mokandjato
-aka ga likambekere pe pepe lyendi, ta vareke ku humburuka ko sitji.
+	Apa da tundire po nonyiki Gingile ta sindike ewoko lyendi mosikorogo sononyiki. Ta pwagesa mo ewoko lyendi lina zura usi, lina kundoka usi wouwa una zura magadi nomaginyo gononyiki gomazera. Makura ta tura evhonkwa lyousi mokandjato aka ga likambekere pepepe lyendi, ta vareke kuhumburuka ko kositji.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -221,7 +222,8 @@ aka ga likambekere pe pepe lyendi, ta vareke ku humburuka ko sitji.
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
@@ -234,7 +236,7 @@ aka ga likambekere pe pepe lyendi, ta vareke ku humburuka ko sitji.
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Ngede age kwa tarerere nayinye eyi ga rugene Gingile nomuncoko- ncoko. Age kwa mu ndindilire amu sigire ko rumpambu rwevhonkwa lyousi lyokuneta ngo mpandu zendi asi mudimburuligousi. Ngede ta pwerumuka tunda mutayi zende mutayi, kuhenya noku henya pevhu. Pouhura Gingile taya siki pevhu lyositji. Ngede ta tjokagura pemanya lya kere pepi nomumati a ndindire mfeto zendi.
+	Ngende age kwa tarerere nayinye eyi ga rugene Gingile nomuncokoncoko. Age kwa ndindilire a mu sigire ko usi wokuneta ngompandu zendi asi mudimburuli gousi. Ngende ta pwerumuka tunda mutayi zende mutayi, kuhenya dogoro pepi nevhu. Pouhura Gingile ta ya siki pedi lyositji. Ngende ta tjokagura pemanya lya kere pepi nomumati a ndindire mfeto zendi.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -245,7 +247,8 @@ aka ga likambekere pe pepe lyendi, ta vareke ku humburuka ko sitji.
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
@@ -258,7 +261,7 @@ aka ga likambekere pe pepe lyendi, ta vareke ku humburuka ko sitji.
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Nye, Gingile ta dimisa mundiro, ta vareke ku genda a ze kembo, kwato sinka sosidira. Ngede ta zigiga nehandu, “VIC-torr! VIC-torr!” Gingile ta sikama, ta tara kosidira gwina makura ta zoro unene. “Ono hara ko usi umwe, ono hara muholi? Ha! Nye nyamelike nina yirugana, nyame dina humu nonyiki. Morwasinke nani li gawinina ou usi woutovara nove?” Makura ta ka za. Ngende kwa handukire! Ngano kapisi yimo ana ku mu rugana ngesi! Nye nage nga twiza nyangwe.
+	Nye, Gingile ta dimisa mundiro, ta damuna egonga lyendi nokuvareka kugenda a ze kembo, kwato sinka sosidira. Ngende ta zigiga nehandu, “VIC-torr! VIC-torr!” Gingile ta sikama, ta tara kosidira sina, makura ta zoro unene. “Ono hara ko usi umwe, ono hara muholi? Ha! Nye nyamelike nina yi rugana, nyame dina humu nonyiki. Morwasinke nani ligawinina ou usi woutovara nove?” Makura ta ka za. Ngende kwa handukire! Ngano kapisi yimo ana kumurugana ngesi! Nye nage nga twiza nyangwe.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -269,7 +272,8 @@ aka ga likambekere pe pepe lyendi, ta vareke ku humburuka ko sitji.
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton08" onclick="playpause('08')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio08" onended="resetbutton('08')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/08.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
@@ -282,7 +286,7 @@ aka ga likambekere pe pepe lyendi, ta vareke ku humburuka ko sitji.
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/09.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Ezuva limwe konyima zoyivike yongandi Gingile ta zuvhu hena ezigido lyousi wa Ngede. Ta diworoka usi worupekwa, makura ta kwama hena nedowo sidira. Konyima zoku pitisira Gingile oku waka hura wiza, Ngede ta sikama monda zositji somundwire somega. “Ahh,” Na gazara asi Gingile . Mbara zononyiki kuvhura ku kara mositji esi. Ta genderere ku hwameka kamundiro kendi noku vareka kuronda, sitji somu si aso komazego gendi. Ngede ta hingire a tare.
+	Ezuva limwe konyima zoyivike yongandi Gingile ta zuvhu hena ezigido lyousi waNgende. Ta diworoka usi worupekwa, makura ta kwama hena nedowo sidira. Konyima zokupitisira Gingile oku wa ka hura wiza, Ngende ta sikama monda zositji somundwire somega. ” Ahh,” Ta gazara Gingile asi.” Mbara zononyiki za kona kukara mositji esi.” Ta genderere kuhwameka kamundiro kendi nokuvareka kuronda, sitji somusi aso mokana kendi. Ngende ta hingire a tare.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -293,7 +297,8 @@ aka ga likambekere pe pepe lyendi, ta vareke ku humburuka ko sitji.
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text10" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton09" onclick="playpause('09')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio09" onended="resetbutton('09')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/09.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
@@ -306,8 +311,7 @@ aka ga likambekere pe pepe lyendi, ta vareke ku humburuka ko sitji.
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/10.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Gingile kwa rondere, nye ta tetuka asi morwsinke ana kupira kuzuvha ezogerero eli a zuvhu nkenyapa. “Nampo mbara kuna kara konhi unene zositji.” Ta gazara mwene. Ta lisindike mwene a ze keguru komutayi gumwe. Pevega lyoku mona mbara zononyiki,
-kwaya pahukira mosipara sangwe! Ngwe kwa handukire sili mokuya zonagwisa momudona nompofu dendi. Ta nunupike menho gendi ta zahameke kana kendi a monekese mazego gendi gomanene gomatwe.
+	Gingile kwa rondere, nye ta lipura mwene asi morwasinke ana kupira kuzuvha ezogerero eli a zuvhu nkenye apa. “Nampo mbara kuna kara konhi zositji unene,” yimo ga gazarere pwamwene. Ta lisindike mwene a ze keguru komutayi gumwe. Pevega lyokumona mbara zononyiki, kwa ya pahukira mosipara sangwe! Ngwe kwa handukire sili moku ya zonagwisa momudona nompofu dendi. Ta nana mo meho gendi, ta zahama a likide mamuzego gendi gomanene gokutwepa unene.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -318,7 +322,8 @@ kwaya pahukira mosipara sangwe! Ngwe kwa handukire sili mokuya zonagwisa momudon
 	<div class="btn-group switcher-group">
 		<a href="#text09" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text11" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton10" onclick="playpause('10')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio10" onended="resetbutton('10')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/10.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
@@ -331,8 +336,7 @@ kwaya pahukira mosipara sangwe! Ngwe kwa handukire sili mokuya zonagwisa momudon
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/11.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Komenho zoku ninka asi ngwe ngano a nyangure po Gingile, Age ta genderere kutunda kositji. Moku genderera ta sekuna mutayi, ta gu mungunda gomunene pevhu ta songonyoka moncugu zompadi. Ta hunyangere usimbu paapa ga vhulira.
-Erago lyendi Ngwe kwakere asi simpe ha da mukwatera nompofu kapi ana kuvhura kumutjida. Ngede mudimburuliusi ga twizire nyangwe zendi. Ano Gingile ga lirongerere po.
+	Komeho zokuninka asi ngwendi ngano a nyangure po Gingile, age kwa genderere kutunda kositji. Mokugenderera ta sekuna mutayi, ta gu mungunda gomunene pevhu ta songonyoka moncugu zompadi. Ta hunyangere usimbu paapa ga vhulira. Erago lyendi Ngwe kwa kere asi simpe ha da mu kwatera nompofu kapi ga vhulire kumutjida. Ngende mudimburuli usi ga twizire nyangwe zendi. Ano Gingile ga lirongerere po.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -343,7 +347,8 @@ Erago lyendi Ngwe kwakere asi simpe ha da mukwatera nompofu kapi ana kuvhura kum
 	<div class="btn-group switcher-group">
 		<a href="#text10" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text12" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton11" onclick="playpause('11')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio11" onended="resetbutton('11')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/11.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
@@ -356,7 +361,7 @@ Erago lyendi Ngwe kwakere asi simpe ha da mukwatera nompofu kapi ana kuvhura kum
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0072/12.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3>
-	Ano makura, Apa vanona va Gingile vaya zuvhire esanseko lya Ngede, Tava ya kara nefumadeko lyo kadiragona. Nkenye apa ava zangura usi, vakona ku siga ko ruha rorunene rwe vhonkwa lyousi likare lyomudimburuli gousi!
+	Ano makura, apa va ya zuvhire vanona vaGingile esanseko lyaNgende, va ya kere nefumadeko lyokadiragona. Nkenye apa ava zangura usi, va kona kusiga ko ruha rorunene rousi u kare womudimburuli gousi!
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt l1"><h3>
@@ -367,7 +372,8 @@ Erago lyendi Ngwe kwakere asi simpe ha da mukwatera nompofu kapi ana kuvhura kum
 	<div class="btn-group switcher-group">
 		<a href="#text11" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Crédits à l’écriture"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton12" onclick="playpause('12')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio12" onended="resetbutton('12')" src="https://globalstorybooks.net/media/audio/kwn/0072/mp3/12.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('kwn,fr','fr,kwn')" class="btn btn-lg lang-primary" title="Passer de kwangali à français">fr</button>
@@ -394,7 +400,7 @@ Erago lyendi Ngwe kwakere asi simpe ha da mukwatera nompofu kapi ana kuvhura kum
 		<h5>Lire plus de contes de <a href="/storybooks-french/stories/kwn/level4">niveau 4</a> :
 </h5>
 			<label class="chip"><a href="/storybooks-french/stories/kwn/0243/">Epwizimuko kumwe nomama</a></label>
-			<label class="chip"><a href="/storybooks-french/stories/kwn/0291/">Eyi ga tente mukurwa Vusi gomukadona</a></label>
+			<label class="chip"><a href="/storybooks-french/stories/kwn/0291/">Eyi ga tente mukurwaVusi gomukadona</a></label>
 			<label class="chip"><a href="/storybooks-french/stories/kwn/0294/">Mabanana gomama wovakadi</a></label>
 	</div>
 </div>

@@ -91,7 +91,8 @@
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/naq/0006/mp3/01.mp3"></audio>
 			<button onclick="switchlang('naq,fr','fr,naq')" class="btn btn-lg lang-primary" title="Passer de khoïkhoï à français">fr</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Écrit par"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/pencil.svg" alt="Écrit par"></span> Ghanaian folktale</h3>
@@ -99,8 +100,9 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Traduit par"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/global.svg" alt="Traduit par"></span> Maureen Merley So-Oabes</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Langue"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/language.svg" alt="Langue"></span> <a href="/storybooks-french/stories/naq">khoïkhoï</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Niveau"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/level.svg" alt="Niveau"></span> <a href="/storybooks-french/stories/naq/level3">Niveau 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Lire l’histoire"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/speaker.svg" alt="Lire l’histoire en entier"></span> <span class="cover_msg">L’enregistrement audio de cette histoire est actuellement indisponible.</span></h3>
-
+		<h3><span class="tooltip tooltip-right" data-tooltip="Lire l’histoire"><img class="cover-icon cover-icon-audio" src="/storybooks-french/css/speaker.svg" alt="Lire l’histoire en entier"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/naq/0006/naq-0006_anansi.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Vitesse de lecture"><img class="cover-icon cover-icon-text" src="/storybooks-french/css/speedometer.svg" alt="Vitesse de lecture" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Vitesse de lecture: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Lecture automatique du conte"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-french/css/play.svg" alt="Lecture automatique du conte" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 
@@ -109,7 +111,7 @@
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Kaixu kaixu ǁae-en ge khoena xū-e ge ǀū-i. ǁÎn ge ge ǀū i mâtin nî ǃhanagās, tamas ka io sarana oms, tamas ka io ǀurina kurusa. ǁNā elob Nyameb ǀhommi ǃnâ hâb ge hoa gā-aisiba ǃhūbaib diba ūhâ. ǁÎb ge nēsa goasūs ǃnâ sâu hâ.
+	Gaxu, gaxu ǁae-en ge khoena xū-e ge ǀū-i. ǁÎn ge ge ǀū i mâtin nî ǃhanaǂgā, tamas ka io sarana ǂom, tamas ka io ǀurin ǀkha sîsenūxūna kuru ǀgausa. ǁNā elob Nyameb ǀhommi ǃnâ hâb, ge hoa gā-aisib ǃhūbaib diba ge ūhâ i. ǁÎb ge nē gā-aisiba ǂgoasū i ǃnâ ge sâu hâ i.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -120,7 +122,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/naq/0006/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('naq,fr','fr,naq')" class="btn btn-lg lang-primary" title="Passer de khoïkhoï à français">fr</button>
@@ -133,7 +136,7 @@
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	ǀGui tsēb ge Nyameba ge mîǁgui ǁîb nē gā-aisib sūsa Anansiba nî mā sa. Mâǁaeb hoab hîab Anansiba nē sūs ǃnâ ra kōbab ge ǀasa xū-e ra ǁkhāǁkhāsen.
+	ǀGui tsēb ge Nyameba ge mîllgui ǁîb nē gā-aisib sūsa, Anansiba nî mā ǃkhaisa. Mâǁaeb hoab hîab Anansiba nē sūs ǃnâ ra kōbab ge ǀasa xū-e ra ǁkhāǁkhāsen. Kaise i ge ge ǁkhoaxa i!
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -144,7 +147,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/naq/0006/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('naq,fr','fr,naq')" class="btn btn-lg lang-primary" title="Passer de khoïkhoï à français">fr</button>
@@ -157,7 +161,7 @@
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Xūǃgunuxa Anansib ge ra âi, “Tita xa ǀgapi hais amǃnâ ǃnorasase nî ūhâhe. O ta ge tita hoana ūhâ” ti. ǀÎb ge kaixu tsuriba goa sūs namipeba xū ǁîb ǁkhoms ai ge ǃgae. ǁÎb ge hais ai ra oa tsoatoa. Xawe i ge kaise ge ǃgom i hais ai goasūs ǀkhā oasa ǁîs ge ǁîb ǁgoadi ai hoaǁae ge re gâusen xui-ao.
+	Xūǃgunuxa Anansib ge gere ǂâi, “Sūsa ta ge ti xa ǀgapi hais ǂamǃnâ ǃnorasase nî ūhâ. O ta ge ti ams ai hoana nî ūhâ” ti. ǁÎb ge gaxu tsuriba ǂgoasūs ǂnamipeba xū ǁîb ǁkhoms ai ge ǃgae. ǁÎb ge hais ai ge ǂoa tsoatoa. Xawe i ge kaise ge ǃgom i hais ai ǂgoasūs ǀkha ǂoasa, ǁîs ge ǁîb ǁgoadi ai hoaǁae gere ǂgâusen xui-ao.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -168,7 +172,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/naq/0006/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('naq,fr','fr,naq')" class="btn btn-lg lang-primary" title="Passer de khoïkhoï à français">fr</button>
@@ -181,7 +186,7 @@
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Nēǁaeb hoabab ge Anansib ǀgôaba hais ǃnaka ge mâ i ǁîba ra kōǃgonse. ǁÎb ge ra mî, “Supu i tide harosa ǁîsa du ga ǁâb ai a apa o?” Anansib ge ra dītsâ goa sūs gā-aisib xa ǀoa hâsa ǁîb ǁâb ai ǃgae, tsî i ge kaise ge supuba pi.
+	Nēǁaeb hoabab ge Anansib ǀgôaba hais ǃnaka ge mâ i, ǁîba ra ǃharase. ǁÎb ge ge mî, “Supu i tide ǂharosa, sūsab ga Dadaba ǁâb ai a apa o?” Anansib ge ge dītsâ ǂgoasūs gā-aisib xa ǀoa hâsa, ǁîb ǁâb ai ǃgaesa, tsî i ge kaise ge supuba bi.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -192,7 +197,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/naq/0006/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('naq,fr','fr,naq')" class="btn btn-lg lang-primary" title="Passer de khoïkhoï à français">fr</button>
@@ -205,7 +211,7 @@
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Supuseb ge ǀgapigab kōse ra kharo. Xaweb ge sâ tsî ra âiǃgâ, “Tita gom hoa gā-aisisa ūhâ o, ob mâti ti ôaba tita xa ra gā-ai!” ǁÎb ge kaise nēs xa ǁaixakaihe tsî goa sūsa haisa xū ra aoǁnâ.
+	Supuseb ge ǀgapikhab kōse ge ǂharo, xaweb ge sâ tsî ra ǂâiǃgâ, “Tita gom hoa gā-aisisa ūhâ o, ob mâti ti ôaba tita xa ra gā-ai?” ǁÎb ge kaise nēs xa ǁaixakaihe, tsî ǂgoasūsa haisa xū ge aoǁnâ.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -216,7 +222,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Page suivante"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/naq/0006/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('naq,fr','fr,naq')" class="btn btn-lg lang-primary" title="Passer de khoïkhoï à français">fr</button>
@@ -229,7 +236,7 @@
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	ǁÎs ge ǃhūb ai ǃâro di ǃnâ ra ǀgora. Gā-aisib ge ge ǃnoraǃnorahe hoan xa a ǀgoraguhe ǁkhā se. ǁNāpaxus ge khoen ge ǁkhāǁkhāsen ǃgaroǃā sîsenga, ǃom sîsenga, sarana kurusa, ǀuri kuruxūna kurusa, tsî ǁkhāti hoaraga xūn ǁîn a dīǁkhāna.
+	ǁÎs ge ǃhūb ai, ǃârodi ǃnâ ge khôaǃā. Gā-aisib ge hoan xa ǀgoraguhe ǁkhāse, ge ǃnoraǃnorahe. ǁNāpaxun ge khoena ge ǁkhāǁkhāsen ǃgaro sîsengu, ǃom sîsengu, sarana kurus, ǀuri sisenūxūna kurus, tsî ǁkhāti hoaraga xūn khoen dī ǁkhāna.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -240,7 +247,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Page précédente"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Crédits à l’écriture"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="lecture/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/naq/0006/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="lecture/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('naq,fr','fr,naq')" class="btn btn-lg lang-primary" title="Passer de khoïkhoï à français">fr</button>
@@ -266,12 +274,12 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Lire plus de contes de <a href="/storybooks-french/stories/naq/level3">niveau 3</a> :
 </h5>
-			<label class="chip"><a href="/storybooks-french/stories/naq/0110/">Khari ǃKhomros: Hôas Wangari Maathaais disa</a></label>
+			<label class="chip"><a href="/storybooks-french/stories/naq/0110/">ǂKhari ǃKhomros: Wangari Maathais di ǂhôas</a></label>
 			<label class="chip"><a href="/storybooks-french/stories/naq/0066/">Nozibeles tsî ǃnona ǀûgu xa</a></label>
-			<label class="chip"><a href="/storybooks-french/stories/naq/0141/">ǁGâu-anib tsî Tūsôab hâkha xa</a></label>
+			<label class="chip"><a href="/storybooks-french/stories/naq/0141/">ǁGâu-anib tsî Tūsôab hâkha</a></label>
 			<label class="chip"><a href="/storybooks-french/stories/naq/0201/">Donki ǀgôab xa</a></label>
-			<label class="chip"><a href="/storybooks-french/stories/naq/0315/">Sankimab di ams</a></label>
-			<label class="chip"><a href="/storybooks-french/stories/naq/0324/">Tsēs ǁgâusa xū ta kaiǃās ǁgasa a ǃgûbas</a></label>
+			<label class="chip"><a href="/storybooks-french/stories/naq/0315/">Sakimab di ams</a></label>
+			<label class="chip"><a href="/storybooks-french/stories/naq/0324/">ǁGâusa xu ta ge kaiǃās ǁga ǃgû tsēs</a></label>
 			<label class="chip"><a href="/storybooks-french/stories/naq/0158/">Anis tsî ǃAriǃkhās hâra xa</a></label>
 	</div>
 </div>
